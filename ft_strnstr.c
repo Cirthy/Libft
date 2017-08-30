@@ -1,23 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: clhoffma <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/08 12:46:40 by clhoffma          #+#    #+#             */
-/*   Updated: 2017/08/08 12:54:16 by clhoffma         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strstr(const char *str, const char *to_find, size_t len)
 {
-	int i;
-	int j;
-	int is_inside;
+	unsigned int	i;
+	int				j;
+	int				is_inside;
 
 	if (to_find[0] == '\0')
-		return (str);
+		return ((char*)str);
 	is_inside = 0;
 	i = 0;
 	while (str[i] != '\0' && !is_inside && i < len)
@@ -31,7 +21,7 @@ char	*ft_strstr(const char *str, const char *to_find, size_t len)
 			j++;
 		}
 		if (to_find[j] == '\0' && is_inside)
-			return (str + i);
+			return ((char*)str + i);
 		i++;
 	}
 	return (NULL);

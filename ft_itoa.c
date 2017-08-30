@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int		get_malloc_size(int n)
 {
 	int	size;

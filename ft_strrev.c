@@ -1,3 +1,14 @@
+#include "libft.h"
+
+void	ft_swap(char *a, char *b)
+{
+	char tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;	
+}
+
 void	ft_strrev(char  *str)
 {
 	int	i;

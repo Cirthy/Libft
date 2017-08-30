@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char	*ft_strtrim(char const *s)
 {
 	int		begin;

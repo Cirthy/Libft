@@ -1,11 +1,13 @@
+#include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = -1;
-	while (i < n && s[i] != c)
+	while (i < n && ((int*)s)[i] != c)
 		i++;
-	if (s[i] == c)
-		return (s + i);
+	if (((int*)s)[i] == c)
+		return (((int*)s) + i);
 	return (NULL);
 }

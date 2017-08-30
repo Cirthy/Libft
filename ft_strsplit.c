@@ -1,4 +1,6 @@
-int		ft_wordcount(char *str, char c)
+#include "libft.h"
+
+int		ft_wordcount(const char *str, char c)
 {
 	int i;
 	int wordcount;
@@ -19,7 +21,7 @@ int		ft_wordcount(char *str, char c)
 	return (wordcount);
 }
 
-int		ft_wordlen(char *str, char c)
+int		ft_wordlen(const char *str, char c)
 {
 	int i;
 
@@ -29,7 +31,7 @@ int		ft_wordlen(char *str, char c)
 	return (i);
 }
 
-char	*ft_fill_string(char *split_whitespaces_i, char *str, int *i, char c)
+char	*ft_fill_string(char *split_whitespaces_i, const char *str, int *i, char c)
 {
 	int k;
 	int len;
@@ -65,7 +67,7 @@ char	**ft_strsplit(char const *s, char c)
 		if (s[i])
 		{
 			split_whitespaces[j] =
-				ft_fill_string(split_whitespaces[j], s, &i);
+				ft_fill_string(split_whitespaces[j], s, &i, c);
 			j++;
 		}
 	}
